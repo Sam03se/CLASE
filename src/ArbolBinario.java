@@ -16,7 +16,22 @@ public class ArbolBinario {
 // Si el árbol está vacío, crea un nuevo nodo
         if (raiz == null) {
             return new Nodo(valor);
+
+
+
+            // Método para realizar un recorrido Preorden en un árbol binario
+            public void preorden(Nodo nodo) {
+                if (nodo != null) {
+                    System.out.print(nodo.valor + " "); // Visita el nodo raíz
+                    preorden(nodo.izquierdo); // Recorre el subárbol izquierdo
+                    preorden(nodo.derecho); // Recorre el subárbol derecho
+                }
+            }
         }
+
+
+
+
 // Si el valor es menor que el valor del nodo actual, se agrega a la izquierda
         if (valor < raiz.valor) {
             raiz.izquierdo = agregarRecursivo(raiz.izquierdo, valor);
