@@ -14,7 +14,7 @@ public class Main {
         arbol.agregar(8);
 
         Nodo.raiz=arbol.raiz;
-        arbol.p
+        arbol.preorde(raiz);
 
 
         }
